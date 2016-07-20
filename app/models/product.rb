@@ -6,6 +6,10 @@ class Product < ActiveRecord::Base
 
   monetize :price_cents
 
+  validates :product_name, presence: true
+  validates :external_product_id, presence: true, uniqueness: true
+  validates :price_cents, presence: true, numericality: { only_integer: true }
+
   private
 
   def update_past_price_records
