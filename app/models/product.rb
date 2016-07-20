@@ -4,6 +4,8 @@ class Product < ActiveRecord::Base
   belongs_to :vendor 
   has_many :past_price_records
 
+  monetize :price_cents
+
   private
 
   def update_past_price_records

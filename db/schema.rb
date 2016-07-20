@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20160720171400) do
   end
 
   create_table "products", force: :cascade do |t|
-    t.string   "product_name"
+    t.string   "product_name",        null: false
     t.integer  "price_cents",         null: false
     t.string   "external_product_id", null: false
     t.integer  "vendor_id",           null: false

@@ -32,9 +32,23 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Creates Money object, easy conversion to desired currency format
+gem 'money-rails'
+
+# HTTP Requests
+gem 'rest-client'
+
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  # debugger console
+  gem 'pry'
+
+  # BDD Test and Matchers
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers', '~> 3.1'
+
+  # Mock Web Requests
+  gem 'webmock'
 end
 
 group :development do
