@@ -4,3 +4,10 @@
 require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
+
+namespace :prod_seed do
+  desc "Creates Prod Vendor"
+  task :vendor => :environment do
+    Vendor.create!(name: "Omega Pricing Inc")
+  end
+end
