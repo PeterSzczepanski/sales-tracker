@@ -43,7 +43,6 @@ group :development, :test do
   gem 'pry'
 
   # BDD Test and Matchers
-  gem 'rspec'
   gem 'rspec-rails'
   gem 'shoulda-matchers', '~> 3.1'
 
