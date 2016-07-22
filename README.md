@@ -21,6 +21,7 @@ bundle exec rake prod_seed:vendor
 * `pry` - debugger console, very useful
 * `rspec-rails` - rspec for rails
 * `shoulda-matchers` - useful matchers for testing models
+* `webmock` - stub out http requests
 
 ## Assumptions
 
@@ -28,3 +29,5 @@ bundle exec rake prod_seed:vendor
 * API uses ISO 8601 `YYYY-MM-DD` 
 * Price changes could be modified without the `product_updater` script.
 * kept `product_name` as it said in the spec but should be `product`
+* Rail logs will be monitored. Better solution is to use a log monitoring service like `honeybadger`
+or `sentry` for alerts.
